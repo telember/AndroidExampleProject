@@ -1,0 +1,4 @@
+include(":app")
+include (":common:core")
+include (":common:foundation")
+rootProject.name = "ExampleProject"
