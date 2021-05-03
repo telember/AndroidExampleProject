@@ -11,7 +11,7 @@ import share.data.data.model.User
 import share.data.data.repository.AppRepository
 import share.data.data.repository.AppRepositoryImpl
 
-class LoginUseCaseTest{
+class LoginUseCaseTest {
     private val appRepository: AppRepository = AppRepositoryImpl()
     private val service: AuthService = mock(AuthService::class.java)
 
@@ -29,7 +29,7 @@ class LoginUseCaseTest{
 
         val loginUseCase = LoginUseCaseImpl(appRepository, service)
 
-        var loginUser: User? = null
+        var loginUser: User?
 
         // act
         runBlocking {
@@ -53,7 +53,7 @@ class LoginUseCaseTest{
 
         val loginUseCase = LoginUseCaseImpl(appRepository, service)
 
-        var loginUser: User? = null
+        var loginUser: User?
 
         // act
         runBlocking {
