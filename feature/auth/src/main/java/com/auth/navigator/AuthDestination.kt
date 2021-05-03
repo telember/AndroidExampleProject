@@ -1,4 +1,4 @@
-package com.auth.navigatior
+package com.auth.navigator
 
 import core.navigation.Destination
 

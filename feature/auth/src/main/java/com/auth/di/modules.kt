@@ -4,7 +4,7 @@ import com.auth.data.AuthService
 import com.auth.data.AuthServiceImpl
 import com.auth.domain.login.LoginUseCase
 import com.auth.domain.login.LoginUseCaseImpl
-import com.auth.navigatior.AuthRouter
+import com.auth.navigator.AuthRouter
 import com.auth.presenter.AuthActivity
 import com.auth.presenter.login.LoginViewController
 import com.auth.presenter.login.LoginViewModel

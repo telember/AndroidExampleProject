@@ -1,6 +1,6 @@
 package com.auth.presenter.register
 
-import com.auth.navigatior.RegisterToLogin
+import com.auth.navigator.RegisterToLogin
 import core.navigation.Router
 import core.view.BaseViewModel
 
