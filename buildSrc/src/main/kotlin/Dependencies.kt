@@ -1,3 +1,4 @@
+import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.kotlin.dsl.DependencyHandlerScope
 
 internal object Version {
@@ -10,7 +11,7 @@ internal object Version {
     const val koinVersion = "2.2.2"
     const val kotlinVersion = "1.4.32"
     const val lifecycleVersion = "2.1.0"
-    const val mockitoVersion = "3.8.0"
+    const val mockitoVersion = "3.9.0"
     const val navVersion = "2.3.5"
     const val okHttpVersion = "4.9.1"
     const val retrofitVersion = "2.9.0"

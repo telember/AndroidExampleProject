@@ -15,8 +15,15 @@ class LoginUseCaseImpl(
 ) : LoginUseCase {
 
   override suspend fun execute(loginModel: LoginModel): User? {
-    appRepository.user = service.login(loginModel.username, loginModel.password)
-    return appRepository.user
+    return if(checkLoginCondition(loginModel)){
+      appRepository.user = service.login(loginModel)
+      appRepository.user
+    } else {
+      null
+    }
   }
 
+  private fun checkLoginCondition(loginModel: LoginModel): Boolean{
+    return loginModel.username.isNotEmpty() && loginModel.password.isNotEmpty()
+  }
 }
