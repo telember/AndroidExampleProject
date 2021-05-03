@@ -51,94 +51,103 @@ object Dependencies {
     }
 
     fun DependencyHandlerScope.implementKoin() {
-        add("api", "org.koin:koin-androidx-scope:${Version.koinVersion}")
-        add("api", "org.koin:koin-androidx-viewmodel:${Version.koinVersion}")
-        add("api", "org.koin:koin-androidx-fragment:${Version.koinVersion}")
-        add("api", "org.koin:koin-androidx-compose:${Version.koinVersion}")
-        add("api", "org.koin:koin-androidx-ext:${Version.koinVersion}")
+        api("org.koin:koin-androidx-scope:${Version.koinVersion}")
+        api("org.koin:koin-androidx-viewmodel:${Version.koinVersion}")
+        api("org.koin:koin-androidx-fragment:${Version.koinVersion}")
+        api("org.koin:koin-androidx-compose:${Version.koinVersion}")
+        api("org.koin:koin-androidx-ext:${Version.koinVersion}")
     }
 
     fun DependencyHandlerScope.implementGlide() {
-        add("api", "com.github.bumptech.glide:glide:4.12.0")
-        add("api", "com.github.bumptech.glide:annotations:4.12.0")
+        api("com.github.bumptech.glide:glide:4.12.0")
+        api("com.github.bumptech.glide:annotations:4.12.0")
         add("annotationProcessor", "com.github.bumptech.glide:compiler:4.12.0")
-        add("api", "jp.wasabeef:glide-transformations:4.3.0")
+        api("jp.wasabeef:glide-transformations:4.3.0")
     }
 
     fun DependencyHandlerScope.implementAndroidLifecycle() {
-        add("api", "androidx.lifecycle:lifecycle-common-java8:${Version.lifecycleVersion}")
-        add("api", "androidx.lifecycle:lifecycle-extensions:${Version.lifecycleVersion}")
-        add("api", "androidx.lifecycle:lifecycle-reactivestreams-ktx:${Version.lifecycleVersion}")
-        add("api", "androidx.lifecycle:lifecycle-runtime:${Version.lifecycleVersion}")
+        api("androidx.lifecycle:lifecycle-common-java8:${Version.lifecycleVersion}")
+        api("androidx.lifecycle:lifecycle-extensions:${Version.lifecycleVersion}")
+        api("androidx.lifecycle:lifecycle-reactivestreams-ktx:${Version.lifecycleVersion}")
+        api("androidx.lifecycle:lifecycle-runtime:${Version.lifecycleVersion}")
     }
 
     fun DependencyHandlerScope.implementSupportLibs() {
-        add("api", "androidx.multidex:multidex:2.0.1")
+        api("androidx.multidex:multidex:2.0.1")
 
-        add("api", "com.google.android.material:material:1.3.0")
-        add("api", "androidx.core:core-ktx:${Version.androidKTXVersion}")
-        add("api", "androidx.appcompat:appcompat:${Version.appcompatVersion}")
+        api("com.google.android.material:material:1.3.0")
+        api("androidx.core:core-ktx:${Version.androidKTXVersion}")
+        api("androidx.appcompat:appcompat:${Version.appcompatVersion}")
 
-        add("api", "androidx.cardview:cardview:1.0.0")
-        add("api", "androidx.recyclerview:recyclerview:1.2.0-alpha04")
-        add("api", "androidx.viewpager2:viewpager2:1.0.0")
-        add("api", "androidx.core:core-ktx:1.5.0-alpha02")
-        add("api", "androidx.constraintlayout:constraintlayout:${Version.constraintLayoutVersion}")
+        api("androidx.cardview:cardview:1.0.0")
+        api("androidx.recyclerview:recyclerview:1.2.0-alpha04")
+        api("androidx.viewpager2:viewpager2:1.0.0")
+        api("androidx.core:core-ktx:1.5.0-alpha02")
+        api("androidx.constraintlayout:constraintlayout:${Version.constraintLayoutVersion}")
     }
 
     fun DependencyHandlerScope.implementKotlinCoroutine() {
-        add("api", "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.coroutinesVersion}")
-        add("api", "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Version.coroutinesVersion}")
+        api("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.coroutinesVersion}")
+        api("org.jetbrains.kotlinx:kotlinx-coroutines-android:${Version.coroutinesVersion}")
     }
 
     fun DependencyHandlerScope.implementNavigation() {
-        add("api", "androidx.navigation:navigation-runtime:${Version.navVersion}")
-        add("api", "androidx.navigation:navigation-fragment-ktx:${Version.navVersion}")
-        add("api", "androidx.navigation:navigation-ui-ktx:${Version.navVersion}")
+        api("androidx.navigation:navigation-runtime:${Version.navVersion}")
+        api("androidx.navigation:navigation-fragment-ktx:${Version.navVersion}")
+        api("androidx.navigation:navigation-ui-ktx:${Version.navVersion}")
     }
 
     fun DependencyHandlerScope.implementRetrofit() {
-        add("api", "com.squareup.retrofit2:retrofit:${Version.retrofitVersion}")
-        add("api", "com.squareup.retrofit2:converter-gson:${Version.retrofitVersion}")
-        add("api", "com.squareup.retrofit2:converter-scalars:2.1.0")
-        add("api", "com.squareup.okhttp3:okhttp:${Version.okHttpVersion}")
-        add("api", "com.squareup.okhttp3:logging-interceptor:${Version.okHttpVersion}")
-        add(
-            "testImplementation",
+        api("com.squareup.retrofit2:retrofit:${Version.retrofitVersion}")
+        api("com.squareup.retrofit2:converter-gson:${Version.retrofitVersion}")
+        api("com.squareup.retrofit2:converter-scalars:2.1.0")
+        api("com.squareup.okhttp3:okhttp:${Version.okHttpVersion}")
+        api("com.squareup.okhttp3:logging-interceptor:${Version.okHttpVersion}")
+        api(
+
             "com.squareup.okhttp3:okhttp-urlconnection:${Version.okHttpVersion}"
         )
     }
 
     fun DependencyHandlerScope.implementTesting() {
-        add("testImplementation", "org.junit.jupiter:junit-jupiter-api:${Version.junitVersion}")
-        add("testImplementation", "org.junit.jupiter:junit-jupiter-engine:${Version.junitVersion}")
-        add(
-            "testImplementation",
-            "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Version.coroutinesVersion}"
+        testImplementation("org.junit.jupiter:junit-jupiter-api:${Version.junitVersion}")
+        testImplementation("org.junit.jupiter:junit-jupiter-engine:${Version.junitVersion}")
+        testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:${Version.coroutinesVersion}")
+
+        testImplementation("androidx.test:core:1.3.0")
+        testImplementation("androidx.arch.core:core-testing:2.1.0")
+        // Mocking
+        testImplementation("org.mockito:mockito-core:${Version.mockitoVersion}")
+        testImplementation("org.mockito:mockito-inline:${Version.mockitoVersion}")
+        // Kotlin
+        testImplementation("org.jetbrains.kotlin:kotlin-test:${Version.kotlinVersion}")
+        testImplementation("org.jetbrains.kotlin:kotlin-reflect:${Version.kotlinVersion}")
+        // Koin
+        testImplementation("org.koin:koin-test:${Version.koinVersion}")
+        // Spek
+        testImplementation("org.spekframework.spek2:spek-dsl-jvm:${Version.spekVersion}")
+        testImplementation(
+
+            "org.spekframework.spek2:spek-runner-junit5:${Version.spekVersion}"
         )
 
-        add("testImplementation", "androidx.test:core:1.3.0")
-        add("testImplementation", "androidx.arch.core:core-testing:2.1.0")
-        // Mocking
-        add("testImplementation", "org.mockito:mockito-core:${Version.mockitoVersion}")
-        add("testImplementation", "org.mockito:mockito-inline:${Version.mockitoVersion}")
-        // Kotlin
-        add("testImplementation", "org.jetbrains.kotlin:kotlin-test:${Version.kotlinVersion}")
-        add("testImplementation", "org.jetbrains.kotlin:kotlin-reflect:${Version.kotlinVersion}")
-        // Koin
-        add("testImplementation", "org.koin:koin-test:${Version.koinVersion}")
-        // Spek
-        add("testImplementation", "org.spekframework.spek2:spek-dsl-jvm:${Version.spekVersion}")
-        add("testImplementation", "org.spekframework.spek2:spek-runner-junit5:${Version.spekVersion}")
+        testImplementation("androidx.test:runner:${Version.runnerVersion}")
+        testImplementation("androidx.test.ext:junit:${Version.junitExtVersion}")
 
-        add("testImplementation", "androidx.test:runner:${Version.runnerVersion}")
-        add("testImplementation", "androidx.test.ext:junit:${Version.junitExtVersion}")
         add(
             "androidTestImplementation",
             "androidx.test.espresso:espresso-core:${Version.espressoVersion}"
         )
         add("androidTestImplementation", "androidx.test:runner:${Version.runnerVersion}")
 
+    }
+
+    private fun DependencyHandlerScope.api(notation: Any) {
+        add("api", notation)
+    }
+
+    private fun DependencyHandlerScope.testImplementation(notation: Any) {
+        add("testImplementation", notation)
     }
 }
 
