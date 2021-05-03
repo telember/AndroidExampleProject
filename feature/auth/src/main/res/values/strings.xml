@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Boilerplate</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="new_user">New user?</string>
+    <string name="email_or_password_is_incorrect">Email or password is incorrect</string>
+    <string name="unable_to_registered">Unable to registered</string>
+</resources>

@@ -24,10 +24,12 @@ android {
             resValue("string", "app_name", "Example Develop")
             applicationIdSuffix = ".debug"
             versionNameSuffix = "-dev"
+            isDebuggable = true
         }
         getByName("release") {
             resValue("string", "app_name", "Example")
             isMinifyEnabled = false
+            isDebuggable = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
@@ -56,4 +58,9 @@ android {
 
 dependencies {
     implementation(project(":common:core"))
+    implementation(project(":common:share:data"))
+
+    implementation(project(":feature:auth"))
+    implementation(project(":feature:home"))
+
 }

@@ -5,7 +5,6 @@ import Dependencies.implementKotlinCoroutine
 import Dependencies.implementNavigation
 import Dependencies.implementRetrofit
 import Dependencies.implementSupportLibs
-import Dependencies.implementTesting
 
 plugins {
     id("com.android.library")

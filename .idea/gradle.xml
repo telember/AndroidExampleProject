@@ -17,6 +17,11 @@
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/common/core" />
             <option value="$PROJECT_DIR$/common/foundation" />
+            <option value="$PROJECT_DIR$/common/share" />
+            <option value="$PROJECT_DIR$/common/share/data" />
+            <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/auth" />
+            <option value="$PROJECT_DIR$/feature/home" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

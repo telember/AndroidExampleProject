@@ -11,6 +11,7 @@ internal object Version {
     const val kotlinVersion = "1.4.32"
     const val lifecycleVersion = "2.1.0"
     const val mockitoVersion = "3.8.0"
+    const val navVersion = "2.3.5"
     const val okHttpVersion = "4.9.1"
     const val retrofitVersion = "2.9.0"
     const val spekVersion = "2.0.15"
@@ -74,7 +75,7 @@ object Dependencies {
     fun DependencyHandlerScope.implementSupportLibs() {
         add("api", "androidx.multidex:multidex:2.0.1")
 
-        add("api", "com.google.android.material:material:1.2.0")
+        add("api", "com.google.android.material:material:1.3.0")
         add("api", "androidx.core:core-ktx:${Version.androidKTXVersion}")
         add("api", "androidx.appcompat:appcompat:${Version.appcompatVersion}")
 
@@ -91,8 +92,9 @@ object Dependencies {
     }
 
     fun DependencyHandlerScope.implementNavigation() {
-        add("api", "androidx.navigation:navigation-fragment-ktx:2.3.0")
-        add("api", "androidx.navigation:navigation-ui-ktx:2.3.0")
+        add("api", "androidx.navigation:navigation-runtime:${Version.navVersion}")
+        add("api", "androidx.navigation:navigation-fragment-ktx:${Version.navVersion}")
+        add("api", "androidx.navigation:navigation-ui-ktx:${Version.navVersion}")
     }
 
     fun DependencyHandlerScope.implementRetrofit() {
