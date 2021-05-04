@@ -7,6 +7,11 @@ android {
     compileSdkVersion(Dependencies.Android.compileSdkVersion)
     buildToolsVersion = Dependencies.Android.buildToolsVersion
 
+    defaultConfig {
+        minSdkVersion(Dependencies.Android.minSdkVersion)
+        targetSdkVersion(Dependencies.Android.targetSdkVersion)
+    }
+
     buildFeatures {
         viewBinding = true
     }
