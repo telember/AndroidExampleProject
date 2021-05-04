@@ -1,8 +1,8 @@
 package com.auth.navigator
 
 import com.auth.R
-import core.navigation.Destination
-import core.navigation.Router
+import share.navigation.Destination
+import share.navigation.Router
 
 class AuthRouter : Router() {
 

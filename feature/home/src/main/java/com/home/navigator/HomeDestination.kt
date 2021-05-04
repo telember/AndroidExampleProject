@@ -1,6 +1,6 @@
 package com.home.navigator
 
-import core.navigation.Destination
+import share.navigation.Destination
 
 object HomeToAuth : Destination
 object HomeToSetting : Destination

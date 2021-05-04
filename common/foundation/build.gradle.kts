@@ -1,10 +1,10 @@
-import Dependencies.implementAndroidLifecycle
-import Dependencies.implementGlide
-import Dependencies.implementKoin
-import Dependencies.implementKotlinCoroutine
-import Dependencies.implementNavigation
-import Dependencies.implementRetrofit
-import Dependencies.implementSupportLibs
+import Dependencies.addAndroidLifecycle
+import Dependencies.addGlide
+import Dependencies.addKoin
+import Dependencies.addKotlinCoroutine
+import Dependencies.addNavigation
+import Dependencies.addRetrofit
+import Dependencies.addSupportLibs
 
 plugins {
     id("com.android.library")
@@ -17,11 +17,11 @@ android {
 
 dependencies {
     api(Dependencies.KotlinLibs.kotlinStd)
-    implementKoin()
-    implementKotlinCoroutine()
-    implementNavigation()
-    implementRetrofit()
-    implementSupportLibs()
-    implementGlide()
-    implementAndroidLifecycle()
+    addKoin()
+    addKotlinCoroutine()
+    addNavigation()
+    addRetrofit()
+    addSupportLibs()
+    addGlide()
+    addAndroidLifecycle()
 }

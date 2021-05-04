@@ -7,13 +7,13 @@ import com.auth.R
 import com.auth.databinding.FragmentRegisterBinding
 import com.auth.presenter.register.RegisterEvent
 import com.auth.presenter.register.RegisterViewModel
-import core.navigation.CrossRouter
-import core.navigation.Router
 import core.view.BaseFragment
 import core.view.viewBinding
 import org.koin.android.ext.android.inject
 import org.koin.androidx.scope.activityRetainedScope
 import org.koin.core.scope.Scope
+import share.navigation.CrossRouter
+import share.navigation.Router
 
 class RegisterFragment : BaseFragment(R.layout.fragment_register) {
 

@@ -1,4 +1,4 @@
-import Dependencies.implementTesting
+import Dependencies.addTesting
 
 plugins {
     id("com.android.library")
@@ -18,5 +18,5 @@ dependencies {
     implementation(project(":common:core"))
     implementation(project(":common:share:data"))
 
-    implementTesting()
+    addTesting()
 }

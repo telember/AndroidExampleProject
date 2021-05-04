@@ -1,4 +1,3 @@
-import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.kotlin.dsl.DependencyHandlerScope
 
 internal object Version {
@@ -51,7 +50,7 @@ object Dependencies {
         const val googleService = "com.google.gms:google-services:${Version.googleServiceVersion}"
     }
 
-    fun DependencyHandlerScope.implementKoin() {
+    fun DependencyHandlerScope.addKoin() {
         api("org.koin:koin-androidx-scope:${Version.koinVersion}")
         api("org.koin:koin-androidx-viewmodel:${Version.koinVersion}")
         api("org.koin:koin-androidx-fragment:${Version.koinVersion}")
@@ -59,21 +58,21 @@ object Dependencies {
         api("org.koin:koin-androidx-ext:${Version.koinVersion}")
     }
 
-    fun DependencyHandlerScope.implementGlide() {
+    fun DependencyHandlerScope.addGlide() {
         api("com.github.bumptech.glide:glide:4.12.0")
         api("com.github.bumptech.glide:annotations:4.12.0")
         add("annotationProcessor", "com.github.bumptech.glide:compiler:4.12.0")
         api("jp.wasabeef:glide-transformations:4.3.0")
     }
 
-    fun DependencyHandlerScope.implementAndroidLifecycle() {
+    fun DependencyHandlerScope.addAndroidLifecycle() {
         api("androidx.lifecycle:lifecycle-common-java8:${Version.lifecycleVersion}")
         api("androidx.lifecycle:lifecycle-extensions:${Version.lifecycleVersion}")
         api("androidx.lifecycle:lifecycle-reactivestreams-ktx:${Version.lifecycleVersion}")
         api("androidx.lifecycle:lifecycle-runtime:${Version.lifecycleVersion}")
     }
 
-    fun DependencyHandlerScope.implementSupportLibs() {
+    fun DependencyHandlerScope.addSupportLibs() {
         api("androidx.multidex:multidex:2.0.1")
 
         api("com.google.android.material:material:1.3.0")
@@ -87,18 +86,18 @@ object Dependencies {
         api("androidx.constraintlayout:constraintlayout:${Version.constraintLayoutVersion}")
     }
 
-    fun DependencyHandlerScope.implementKotlinCoroutine() {
+    fun DependencyHandlerScope.addKotlinCoroutine() {
         api("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.coroutinesVersion}")
         api("org.jetbrains.kotlinx:kotlinx-coroutines-android:${Version.coroutinesVersion}")
     }
 
-    fun DependencyHandlerScope.implementNavigation() {
-        api("androidx.navigation:navigation-runtime:${Version.navVersion}")
-        api("androidx.navigation:navigation-fragment-ktx:${Version.navVersion}")
-        api("androidx.navigation:navigation-ui-ktx:${Version.navVersion}")
+    fun DependencyHandlerScope.addNavigation(configName: String = "api") {
+        add(configName, "androidx.navigation:navigation-runtime:${Version.navVersion}")
+        add(configName, "androidx.navigation:navigation-fragment-ktx:${Version.navVersion}")
+        add(configName, "androidx.navigation:navigation-ui-ktx:${Version.navVersion}")
     }
 
-    fun DependencyHandlerScope.implementRetrofit() {
+    fun DependencyHandlerScope.addRetrofit() {
         api("com.squareup.retrofit2:retrofit:${Version.retrofitVersion}")
         api("com.squareup.retrofit2:converter-gson:${Version.retrofitVersion}")
         api("com.squareup.retrofit2:converter-scalars:2.1.0")
@@ -110,7 +109,7 @@ object Dependencies {
         )
     }
 
-    fun DependencyHandlerScope.implementTesting() {
+    fun DependencyHandlerScope.addTesting() {
         testImplementation("org.junit.jupiter:junit-jupiter-api:${Version.junitVersion}")
         testImplementation("org.junit.jupiter:junit-jupiter-engine:${Version.junitVersion}")
         testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:${Version.coroutinesVersion}")
@@ -128,7 +127,6 @@ object Dependencies {
         // Spek
         testImplementation("org.spekframework.spek2:spek-dsl-jvm:${Version.spekVersion}")
         testImplementation(
-
             "org.spekframework.spek2:spek-runner-junit5:${Version.spekVersion}"
         )
 

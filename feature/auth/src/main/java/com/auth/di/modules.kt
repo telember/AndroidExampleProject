@@ -10,9 +10,9 @@ import com.auth.presenter.login.LoginViewController
 import com.auth.presenter.login.LoginViewModel
 import com.auth.presenter.login.view.LoginViewControllerImpl
 import com.auth.presenter.register.RegisterViewModel
-import core.navigation.Router
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
+import share.navigation.Router
 
 val authModule = module {
     single<Router> { AuthRouter() }

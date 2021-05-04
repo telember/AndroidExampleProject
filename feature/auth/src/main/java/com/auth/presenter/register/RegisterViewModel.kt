@@ -1,8 +1,8 @@
 package com.auth.presenter.register
 
 import com.auth.navigator.RegisterToLogin
-import core.navigation.Router
 import core.view.BaseViewModel
+import share.navigation.Router
 
 class RegisterViewModel(
     private val router: Router,

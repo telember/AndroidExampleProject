@@ -1,4 +1,4 @@
-package core.navigation
+package share.navigation
 
 import androidx.navigation.NavController
 

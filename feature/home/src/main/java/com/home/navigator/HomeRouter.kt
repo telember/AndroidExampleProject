@@ -1,7 +1,7 @@
 package com.home.navigator
 
-import core.navigation.Destination
-import core.navigation.Router
+import share.navigation.Destination
+import share.navigation.Router
 
 class HomeRouter : Router() {
     override fun routeTo(destination: Destination) {

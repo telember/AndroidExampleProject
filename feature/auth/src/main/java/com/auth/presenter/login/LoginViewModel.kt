@@ -4,8 +4,8 @@ import com.auth.domain.login.LoginUseCase
 import com.auth.domain.login.model.LoginModel
 import com.auth.navigator.AuthToHome
 import com.auth.navigator.LoginToRegister
-import core.navigation.Router
 import core.view.BaseViewModel
+import share.navigation.Router
 
 class LoginViewModel(
     private val router: Router,

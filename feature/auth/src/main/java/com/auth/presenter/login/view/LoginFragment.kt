@@ -7,13 +7,13 @@ import com.auth.databinding.FragmentLoginBinding
 import com.auth.presenter.login.LoginEvent
 import com.auth.presenter.login.LoginViewController
 import com.auth.presenter.login.LoginViewModel
-import core.navigation.CrossRouter
-import core.navigation.Router
 import core.view.BaseFragment
 import core.view.viewBinding
 import org.koin.android.ext.android.inject
 import org.koin.androidx.scope.activityRetainedScope
 import org.koin.core.scope.Scope
+import share.navigation.CrossRouter
+import share.navigation.Router
 
 class LoginFragment : BaseFragment(R.layout.fragment_login) {
 

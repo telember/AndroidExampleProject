@@ -2,9 +2,9 @@ package com.home.presenter
 
 import com.home.R
 import com.home.navigator.HomeToAuth
-import core.navigation.Router
 import core.view.BaseViewModel
 import share.data.domain.GetUserUseCase
+import share.navigation.Router
 
 class HomeViewModel(
     private val getUserUseCase: GetUserUseCase,

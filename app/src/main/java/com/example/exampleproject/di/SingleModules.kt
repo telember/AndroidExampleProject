@@ -1,10 +1,10 @@
 package com.example.exampleproject.di
 
-import com.example.exampleproject.view.CrossRouterImpl
-import core.navigation.CrossRouter
+import share.navigation.CrossRouterImpl
 import org.koin.dsl.module
 import share.data.data.repository.AppRepository
 import share.data.data.repository.AppRepositoryImpl
+import share.navigation.CrossRouter
 
 val singleModules = module {
     single<AppRepository> { AppRepositoryImpl() }
