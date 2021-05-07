@@ -3,9 +3,11 @@ package com.auth.presenter.login.view
 import android.view.View
 import android.widget.Toast
 import com.auth.databinding.FragmentLoginBinding
+import com.auth.navigator.AuthToHome
 import com.auth.presenter.login.LoginEvent
 import com.auth.presenter.login.LoginViewController
 import core.view.hideKeyboard
+import share.navigation.FeatureRoute
 
 class LoginViewControllerImpl: LoginViewController {
     override fun handleEvent(loginEvent: LoginEvent?, binding: FragmentLoginBinding) {

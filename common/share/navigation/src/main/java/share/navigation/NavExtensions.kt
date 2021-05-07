@@ -1,5 +1,6 @@
 package share.navigation
 
+import androidx.annotation.MainThread
 import androidx.core.net.toUri
 import androidx.navigation.NavController
 import androidx.navigation.NavDeepLinkRequest
@@ -10,6 +11,7 @@ fun buildDeepLink(destination: DeepLinkDestination) =
         .fromUri(destination.address.toUri())
         .build()
 
+@MainThread
 fun NavController.deepLinkNavigateTo(
     deepLinkDestination: DeepLinkDestination,
     popUpTo: Boolean = false

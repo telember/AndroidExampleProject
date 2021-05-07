@@ -2,18 +2,19 @@ package core.view
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 open class BaseViewModel<T> : ViewModel() {
 
     val event = SingleLiveEvent<T>()
 
-    fun onBackground(function: suspend () -> Unit) {
+    fun launchDataLoad(function: suspend () -> Unit,
+                       failureFallback: (Throwable) -> Unit = {}) {
         viewModelScope.launch {
-            withContext(Dispatchers.IO) {
+            runCatching {
                 function.invoke()
+            }.onFailure {
+                failureFallback.invoke(it)
             }
         }
     }

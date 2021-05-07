@@ -3,7 +3,7 @@
     package="com.home">
     <application>
         <activity
-            android:name="com.home.presenter.view.HomeActivity"
+            android:name="com.home.presenter.view.HomeFragment"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
         </activity>
     </application>

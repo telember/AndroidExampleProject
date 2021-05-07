@@ -9,25 +9,15 @@ import com.auth.presenter.register.RegisterEvent
 import com.auth.presenter.register.RegisterViewModel
 import core.view.BaseFragment
 import core.view.viewBinding
-import org.koin.android.ext.android.inject
-import org.koin.androidx.scope.activityRetainedScope
-import org.koin.core.scope.Scope
-import share.navigation.CrossRouter
-import share.navigation.Router
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RegisterFragment : BaseFragment(R.layout.fragment_register) {
 
     private val binding by viewBinding(FragmentRegisterBinding::bind)
-    private lateinit var scope: Scope
-    private val viewModel: RegisterViewModel by lazy { scope.get() }
-    private val crossRouter: CrossRouter by inject()
-    private val router: Router by lazy { scope.get() }
+    private val viewModel: RegisterViewModel by viewModel()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        scope = requireActivity().activityRetainedScope()
-        router.crossRouter = crossRouter
-        crossRouter.activity = requireActivity()
         binding.loginButton.setOnClickListener {
             viewModel.performClickLogin()
         }

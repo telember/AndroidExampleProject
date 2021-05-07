@@ -4,11 +4,11 @@ import com.home.R
 import com.home.navigator.HomeToAuth
 import core.view.BaseViewModel
 import share.data.domain.GetUserUseCase
-import share.navigation.Router
+import share.navigation.FeatureRoute
 
 class HomeViewModel(
     private val getUserUseCase: GetUserUseCase,
-    private val router: Router
+    private val router: FeatureRoute
 ) : BaseViewModel<HomeEvent>() {
 
     fun onStart() {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_auth"
+    android:id="@id/nav_auth"
     app:startDestination="@id/registerFragment">
 
     <fragment
@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="example://register" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -21,5 +24,8 @@
             app:popUpTo="@id/nav_auth"
             app:popUpToInclusive="true"
             app:destination="@id/registerFragment" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="example://login" />
     </fragment>
 </navigation>

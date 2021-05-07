@@ -2,10 +2,11 @@ package com.auth.presenter.register
 
 import com.auth.navigator.RegisterToLogin
 import core.view.BaseViewModel
-import share.navigation.Router
+import kotlinx.coroutines.CoroutineDispatcher
+import share.navigation.FeatureRoute
 
 class RegisterViewModel(
-    private val router: Router,
+    private val router: FeatureRoute
 ) : BaseViewModel<RegisterEvent>() {
 
     fun performClickLogin() {

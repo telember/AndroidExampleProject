@@ -5,11 +5,11 @@ import com.auth.domain.login.model.LoginModel
 import com.auth.navigator.AuthToHome
 import com.auth.navigator.LoginToRegister
 import core.view.BaseViewModel
-import share.navigation.Router
+import share.navigation.FeatureRoute
 
 class LoginViewModel(
-    private val router: Router,
-    private val loginUseCase: LoginUseCase
+    private val router: FeatureRoute,
+    private val loginUseCase: LoginUseCase,
 ) : BaseViewModel<LoginEvent>() {
 
     fun performClickRegisterButton() {
@@ -17,16 +17,17 @@ class LoginViewModel(
     }
 
     fun performLogin(email: String, password: String) {
-        onBackground {
+        launchDataLoad({
             postEvent(LoginEvent.Loading)
-            //TODO call login useCase
             val user = loginUseCase.execute(LoginModel(email, password))
             if (user != null) {
-                postEvent(LoginEvent.LoginSuccess(user.name))
+                LoginEvent.LoginSuccess(user.name)
                 router.routeTo(AuthToHome)
             } else {
-                postEvent(LoginEvent.LoginError)
+                LoginEvent.LoginError
             }
-        }
+        }, {
+
+        })
     }
 }

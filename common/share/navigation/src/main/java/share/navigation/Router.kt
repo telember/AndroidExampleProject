@@ -4,11 +4,14 @@ import androidx.navigation.NavController
 
 abstract class Router {
 
-    var crossRouter: CrossRouter? = null
     var navController: NavController? = null
     var latestRoute: Destination? = null
 
-    open fun routeTo(destination: Destination) {
+    fun currentDestination(destination: Destination) {
         latestRoute = destination
+    }
+
+    fun crossRoute(deepLink: DeepLinkDestination){
+        navController?.deepLinkNavigateTo(deepLink)
     }
 }

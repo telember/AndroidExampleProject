@@ -9,27 +9,17 @@ import com.auth.presenter.login.LoginViewController
 import com.auth.presenter.login.LoginViewModel
 import core.view.BaseFragment
 import core.view.viewBinding
-import org.koin.android.ext.android.inject
-import org.koin.androidx.scope.activityRetainedScope
-import org.koin.core.scope.Scope
-import share.navigation.CrossRouter
-import share.navigation.Router
+import org.koin.android.ext.android.get
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginFragment : BaseFragment(R.layout.fragment_login) {
 
     private val binding by viewBinding(FragmentLoginBinding::bind)
-    private lateinit var scope: Scope
-    private val viewModel: LoginViewModel by lazy { scope.get() }
-    private val view: LoginViewController by lazy { scope.get() }
-    private val crossRouter: CrossRouter by inject()
-    private val router: Router by lazy { scope.get() }
+    private val viewModel: LoginViewModel by viewModel()
+    private val view: LoginViewController = get()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        scope = requireActivity().activityRetainedScope()
-
-        router.crossRouter = crossRouter
-        crossRouter.activity = requireActivity()
         initListener()
         viewModel.event.observe(
             viewLifecycleOwner,
