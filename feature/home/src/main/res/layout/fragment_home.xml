@@ -23,11 +23,12 @@
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logoutButton"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home Page"/>
+            android:text="Logout"/>
 
     </FrameLayout>
 

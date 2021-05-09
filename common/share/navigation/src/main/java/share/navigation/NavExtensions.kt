@@ -13,19 +13,9 @@ fun buildDeepLink(destination: DeepLinkDestination) =
 
 @MainThread
 fun NavController.deepLinkNavigateTo(
-    deepLinkDestination: DeepLinkDestination,
-    popUpTo: Boolean = false
+    deepLinkDestination: DeepLinkDestination
 ) {
-    val builder = NavOptions.Builder()
-
-    if (popUpTo) {
-        builder.setPopUpTo(graph.startDestination, true)
-    }
-
-    navigate(
-        buildDeepLink(deepLinkDestination),
-        builder.build()
-    )
+    navigate(buildDeepLink(deepLinkDestination))
 }
 
 

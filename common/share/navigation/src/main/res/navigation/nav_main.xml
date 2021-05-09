@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:startDestination="@id/nav_auth"
-    android:id="@+id/nav_main">
+    android:id="@+id/nav_main"
+    app:startDestination="@id/nav_base">
+
+    <include app:graph="@navigation/nav_base" />
 
     <include app:graph="@navigation/nav_auth" />
 
@@ -11,15 +13,19 @@
     <action
         android:id="@+id/action_global_home_flow"
         app:destination="@id/nav_home"
-        app:popUpTo="@id/nav_main"
         app:enterAnim="@anim/nav_default_enter_anim"
-        app:exitAnim="@anim/nav_default_exit_anim" />
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popUpTo="@id/nav_main" />
 
     <action
-        app:popUpTo="@id/nav_main"
-        android:id="@+id/action_global_dashboard_flow"
-        app:destination="@id/nav_home"
+        android:id="@+id/action_global_auth_flow"
+        app:destination="@id/nav_auth"
         app:enterAnim="@anim/nav_default_enter_anim"
-        app:exitAnim="@anim/nav_default_exit_anim" >
-    </action>
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popUpTo="@id/nav_main"/>
+
+    <action
+        android:id="@+id/action_global_start_flow"
+        app:launchSingleTop="true"
+        app:destination="@id/nav_base"/>
 </navigation>

@@ -1,7 +1,6 @@
 package com.home.presenter
 
-import com.home.R
-import com.home.navigator.HomeToAuth
+import com.home.navigator.HomeToLogout
 import core.view.BaseViewModel
 import share.data.domain.GetUserUseCase
 import share.navigation.FeatureRoute
@@ -16,9 +15,7 @@ class HomeViewModel(
         event.value = HomeEvent.Greeting("Hi ${user?.name ?: "***"}")
     }
 
-    fun onOptionSelected(id: Int) {
-        when (id) {
-            R.id.logoutMenu -> router.routeTo(HomeToAuth)
-        }
+    fun onLogout() {
+        router.routeTo(HomeToLogout)
     }
 }

@@ -1,6 +1,6 @@
 import org.gradle.kotlin.dsl.DependencyHandlerScope
 
-internal object Version {
+object Version {
 
     const val androidKTXVersion = "1.1.0"
     const val appcompatVersion = "1.1.0"
@@ -76,6 +76,7 @@ object Dependencies {
         api("androidx.multidex:multidex:2.0.1")
 
         api("com.google.android.material:material:1.3.0")
+        api("androidx.legacy:legacy-support-v4:1.0.0")
         api("androidx.core:core-ktx:${Version.androidKTXVersion}")
         api("androidx.appcompat:appcompat:${Version.appcompatVersion}")
 

@@ -14,6 +14,7 @@ val homeModules = module {
     viewModel {
         HomeViewModel(
             router = get(named(HOME_ROUTER)),
-            getUserUseCase = get())
+            getUserUseCase = get()
+        )
     }
 }

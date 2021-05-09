@@ -21,12 +21,15 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
         initListener()
         viewModel.onStart()
     }
 
     private fun initListener() {
+        binding.logoutButton.setOnClickListener {
+            viewModel.onLogout()
+        }
+
         viewModel.event.observe(this, ::handleEvent)
     }
 
@@ -40,10 +43,5 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
     private fun setToolbar(greeting: HomeEvent.Greeting) {
         binding.toolbar.title = greeting.text
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        viewModel.onOptionSelected(item.itemId)
-        return super.onOptionsItemSelected(item)
     }
 }

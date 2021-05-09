@@ -3,6 +3,7 @@ plugins {
     kotlin(PlugIns.kotlinAndroid)
     kotlin(PlugIns.kotlinKapt)
     id(PlugIns.kotlinParcelize)
+    id("kotlin-android")
 }
 
 android {
@@ -62,5 +63,4 @@ dependencies {
 
     implementation(project(":feature:auth"))
     implementation(project(":feature:home"))
-
 }
