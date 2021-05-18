@@ -3,7 +3,6 @@ plugins {
     kotlin(PlugIns.kotlinAndroid)
     kotlin(PlugIns.kotlinKapt)
     id(PlugIns.kotlinParcelize)
-    id("kotlin-android")
 }
 
 android {
@@ -22,19 +21,21 @@ android {
 
     buildTypes {
         getByName("debug") {
-            resValue("string", "app_name", "Example Develop")
             applicationIdSuffix = ".debug"
-            versionNameSuffix = "-dev"
             isDebuggable = true
         }
         getByName("release") {
-            resValue("string", "app_name", "Example")
             isMinifyEnabled = false
             isDebuggable = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
         }
+    }
+    flavorDimensions(BuildProductDimensions.ENVIRONMENT)
+    productFlavors {
+        ProductFlavorDevelop.appCreate(this)
+        ProductFlavorProduction.appCreate(this)
     }
 
     compileOptions {
