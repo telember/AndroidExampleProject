@@ -20,6 +20,6 @@ class MainFragment : BaseFragment(R.layout.fragment_main) {
 
     private fun initialRoute() {
         router.navController = findNavController()
-        router.routeToNavFlow(GlobalDestination.AuthNav)
+        router.routeToNavFlow(GlobalDestination.HomeNav)
     }
 }

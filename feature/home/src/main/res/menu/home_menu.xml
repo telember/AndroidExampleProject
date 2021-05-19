@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/logoutMenu"
-        android:title="@string/logout"/>
+    <item
+        android:id="@id/nav_explore"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="Explore"/>
+
+    <item
+        android:id="@+id/nav_auth"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:title="Dashboard"/>
+
+    <item
+        android:id="@+id/nav_graph_notification"
+        android:enabled="false"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:title="Notification"/>
 </menu>

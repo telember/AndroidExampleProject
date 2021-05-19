@@ -3,4 +3,5 @@
     <item name="nav_base" type="id" />
     <item name="nav_auth" type="id" />
     <item name="nav_home" type="id" />
+    <item name="nav_explore" type="id" />
 </resources>

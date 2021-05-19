@@ -17,6 +17,10 @@ android {
         targetSdkVersion(Dependencies.Android.targetSdkVersion)
     }
 
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
     buildFeatures {
         viewBinding = true
     }
