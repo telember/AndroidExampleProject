@@ -5,6 +5,6 @@ import com.home.di.homeModules
 import share.data.di.shareDataModule
 
 val appModules = authModule +
-        homeModules +
-        shareDataModule +
-        singleModules
+    homeModules +
+    shareDataModule +
+    singleModules

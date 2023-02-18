@@ -30,7 +30,7 @@ class RegisterFragment : BaseFragment(R.layout.fragment_register) {
             viewModel.performRegister(
                 email = binding.emailText.text.toString(),
                 password = binding.passwordText.text.toString(),
-                confirmPassword = binding.repasswordText.text.toString()
+                confirmPassword = binding.repasswordText.text.toString(),
             )
         }
     }

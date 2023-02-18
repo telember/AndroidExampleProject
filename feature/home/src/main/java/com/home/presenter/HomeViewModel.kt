@@ -7,7 +7,7 @@ import share.navigation.FeatureRoute
 
 class HomeViewModel(
     private val getUserUseCase: GetUserUseCase,
-    private val router: FeatureRoute
+    private val router: FeatureRoute,
 ) : BaseViewModel<HomeEvent>() {
 
     fun onStart() {

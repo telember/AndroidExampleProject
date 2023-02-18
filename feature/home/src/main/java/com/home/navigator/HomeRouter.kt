@@ -1,6 +1,9 @@
 package com.home.navigator
 
-import share.navigation.*
+import share.navigation.Destination
+import share.navigation.FeatureRoute
+import share.navigation.GlobalDestination
+import share.navigation.Router
 
 class HomeRouter(private val router: Router) : FeatureRoute(router) {
 

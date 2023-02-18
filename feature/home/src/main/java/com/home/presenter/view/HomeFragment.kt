@@ -26,7 +26,6 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     }
 
     private fun initListener() {
-
         viewModel.event.observe(this, ::handleEvent)
     }
 
@@ -39,21 +38,19 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     }
 
     private fun setToolbar(greeting: HomeEvent.Greeting) {
-
     }
 
     private fun setupBottomNavigationBar() {
-
         val navGraphIds = listOf(
             R.navigation.nav_explore,
-            R.navigation.nav_auth
+            R.navigation.nav_auth,
         )
 
         // Setup the bottom navigation view with a list of navigation graphs
         val controller = binding.bottomNav.setupWithNavController(
             navGraphIds = navGraphIds,
             fragmentManager = childFragmentManager,
-            containerId = R.id.nav_host_container
+            containerId = R.id.nav_host_container,
         )
         controller.observe(viewLifecycleOwner, { navController ->
             router.currentBottomNavController = navController
@@ -69,11 +66,9 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
     private fun showBottomNav() {
         binding.bottomNav.visibility = View.VISIBLE
-
     }
 
     private fun hideBottomNav() {
         binding.bottomNav.visibility = View.GONE
-
     }
 }

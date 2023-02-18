@@ -27,7 +27,6 @@ class LoginViewModel(
                 LoginEvent.LoginError
             }
         }, {
-
         })
     }
 }

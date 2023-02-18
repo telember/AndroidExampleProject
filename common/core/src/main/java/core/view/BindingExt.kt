@@ -10,7 +10,7 @@ fun <T : ViewBinding> Fragment.viewBinding(viewBindingFactory: (View) -> T) =
     FragmentViewBindingDelegate(this, viewBindingFactory)
 
 inline fun <T : ViewBinding> AppCompatActivity.viewBinding(
-    crossinline bindingInflater: (LayoutInflater) -> T
+    crossinline bindingInflater: (LayoutInflater) -> T,
 ) =
     lazy(LazyThreadSafetyMode.NONE) {
         bindingInflater.invoke(layoutInflater)
