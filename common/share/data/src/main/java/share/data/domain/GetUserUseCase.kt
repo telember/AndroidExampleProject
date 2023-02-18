@@ -8,7 +8,7 @@ interface GetUserUseCase {
 }
 
 class GetUserUseCaseImpl(
-    private val appRepository: AppRepository
+    private val appRepository: AppRepository,
 ) : GetUserUseCase {
 
     override fun execute(): User? {

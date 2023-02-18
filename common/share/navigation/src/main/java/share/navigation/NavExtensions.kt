@@ -4,7 +4,6 @@ import androidx.annotation.MainThread
 import androidx.core.net.toUri
 import androidx.navigation.NavController
 import androidx.navigation.NavDeepLinkRequest
-import androidx.navigation.NavOptions
 
 fun buildDeepLink(destination: DeepLinkDestination) =
     NavDeepLinkRequest.Builder
@@ -13,9 +12,7 @@ fun buildDeepLink(destination: DeepLinkDestination) =
 
 @MainThread
 fun NavController.deepLinkNavigateTo(
-    deepLinkDestination: DeepLinkDestination
+    deepLinkDestination: DeepLinkDestination,
 ) {
     navigate(buildDeepLink(deepLinkDestination))
 }
-
-

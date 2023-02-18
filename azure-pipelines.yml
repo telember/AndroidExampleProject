@@ -8,4 +8,15 @@ steps:
       gradleOptions: '-Xmx3072m'
       publishJUnitResults: false
       testResultsFiles: '**/TEST-*.xml'
+      tasks: 'ktlintCheck'
+    displayName: 'Lint Validation'
+
+  - task: Gradle@2
+    inputs:
+      gradleWrapperFile: 'gradlew'
+      gradleOptions: '-Xmx3072m'
+      publishJUnitResults: false
+      testResultsFiles: '**/TEST-*.xml'
       tasks: 'assembleDebug'
+    displayName: 'Gradle Build'
+

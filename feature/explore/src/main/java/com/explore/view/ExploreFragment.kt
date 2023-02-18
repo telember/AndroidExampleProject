@@ -10,7 +10,7 @@ import org.koin.android.ext.android.get
 import share.navigation.GlobalDestination
 import share.navigation.Router
 
-class ExploreFragment : BaseFragment(R.layout.fragment_explore){
+class ExploreFragment : BaseFragment(R.layout.fragment_explore) {
     private val binding by viewBinding(FragmentExploreBinding::bind)
     val router: Router = get()
 

@@ -11,7 +11,7 @@ import kotlin.reflect.KProperty
 
 class FragmentViewBindingDelegate<T : ViewBinding>(
     val fragment: Fragment,
-    val viewBindingFactory: (View) -> T
+    val viewBindingFactory: (View) -> T,
 ) : ReadOnlyProperty<Fragment, T> {
     private var binding: T? = null
 
@@ -38,7 +38,7 @@ class FragmentViewBindingDelegate<T : ViewBinding>(
         val lifecycle = fragment.viewLifecycleOwner.lifecycle
         if (!lifecycle.currentState.isAtLeast(Lifecycle.State.INITIALIZED)) {
             throw IllegalStateException(
-                "Should not attempt to get bindings when Fragment views are destroyed."
+                "Should not attempt to get bindings when Fragment views are destroyed.",
             )
         }
 

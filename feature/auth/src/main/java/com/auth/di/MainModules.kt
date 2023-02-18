@@ -27,7 +27,7 @@ val authModule = module {
     viewModel {
         LoginViewModel(
             router = get(named(AUTH_ROUTER)),
-            loginUseCase = get()
+            loginUseCase = get(),
         )
     }
     viewModel { RegisterViewModel(router = get(named(AUTH_ROUTER))) }

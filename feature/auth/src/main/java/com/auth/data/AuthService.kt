@@ -16,9 +16,8 @@ class AuthServiceImpl : AuthService {
     override suspend fun register(
         email: String,
         password: String,
-        confirmPassword: String
+        confirmPassword: String,
     ): User? {
-
         return null
     }
 }

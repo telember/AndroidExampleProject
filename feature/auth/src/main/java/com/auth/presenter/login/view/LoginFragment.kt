@@ -23,7 +23,7 @@ class LoginFragment : BaseFragment(R.layout.fragment_login) {
         initListener()
         viewModel.event.observe(
             viewLifecycleOwner,
-            ::handleEvent
+            ::handleEvent,
         )
     }
 
@@ -39,7 +39,7 @@ class LoginFragment : BaseFragment(R.layout.fragment_login) {
         binding.loginButton.setOnClickListener {
             viewModel.performLogin(
                 binding.email.text.toString(),
-                binding.password.text.toString()
+                binding.password.text.toString(),
             )
         }
     }

@@ -1,7 +1,10 @@
 package com.auth.navigator
 
 import com.auth.R
-import share.navigation.*
+import share.navigation.Destination
+import share.navigation.FeatureRoute
+import share.navigation.GlobalDestination
+import share.navigation.Router
 
 class AuthRouter(private val router: Router) : FeatureRoute(router) {
 

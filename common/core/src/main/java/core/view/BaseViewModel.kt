@@ -8,8 +8,10 @@ open class BaseViewModel<T> : ViewModel() {
 
     val event = SingleLiveEvent<T>()
 
-    fun launchDataLoad(function: suspend () -> Unit,
-                       failureFallback: (Throwable) -> Unit = {}) {
+    fun launchDataLoad(
+        function: suspend () -> Unit,
+        failureFallback: (Throwable) -> Unit = {},
+    ) {
         viewModelScope.launch {
             runCatching {
                 function.invoke()
