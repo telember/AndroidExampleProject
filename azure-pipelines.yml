@@ -9,7 +9,7 @@ steps:
       publishJUnitResults: false
       testResultsFiles: '**/TEST-*.xml'
       tasks: 'ktlintCheck'
-    displayName: 'Lint Validation'
+    displayName: 'KtLint Validation'
 
   - task: Gradle@2
     inputs:
